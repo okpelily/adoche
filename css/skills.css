@@ -1,0 +1,60 @@
+body { font-family: Arial, sans-serif; background: #1da391; }
+.skills { padding: 50px; text-align: center; }
+.heading { font-size: 32px; margin-bottom: 30px; }
+.heading span { color: #f0f1e9; }
+.skill-bars { max-width: 600px; margin: auto; }
+.bar { margin: 15px 0; text-align: left; }
+.bar span { font-weight: bold; }
+.progress {
+  height: 12px;
+  background:#f4f5ee;
+  border-radius: 6px;
+  animation: grow 1.5s ease;
+}
+@keyframes grow { from{width:0;} to{width:100%;} }
+/* Soft Skills Section */
+.soft-skills {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.soft-skills li {
+  background: #fbfcfa;;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #333;
+  transition: transform 0.2s ease;
+  padding: 12px 16px;
+  border-left: 4px solid #ff9800
+}
+
+.soft-skills li:hover {
+  transform: translateX(5px);
+  background: #e9eef3;
+}
+/* Download CV Button */
+.download-cv {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.btn-cv {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #181817;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-cv:hover {
+  background: #e68900;
+  transform: scale(1.05);
+}
