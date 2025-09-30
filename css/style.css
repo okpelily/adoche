@@ -773,3 +773,126 @@ h1, h2, h3, p {
   .home-content h1 { font-size: 2.4rem; }
   .home-content p { font-size: 1.4rem; }
 }
+/* Make everything scale */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive typography */
+h1, h2, h3, p {
+  word-wrap: break-word;
+}
+
+/* Mobile menu icon */
+#menu-icon {
+  display: none;
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: #fff;
+  z-index: 1001;
+}
+
+/* Default navbar (desktop) */
+.navbar {
+  display: flex;
+  gap: 20px;
+  transition: right 0.3s ease-in-out; /* smooth animation */
+}
+
+/* ===== Tablet ===== */
+@media (max-width: 1024px) {
+  html { font-size: 58%; }
+  header { padding: 1rem 5%; }
+  section { padding: 6rem 5% 3rem; }
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 768px) {
+  html { font-size: 55%; }
+
+  /* show hamburger */
+  #menu-icon {
+    display: block;
+  }
+
+  /* navbar hidden offscreen by default */
+  .navbar {
+    position: absolute;
+    top: 100%; 
+    right: -100%; /* move it outside screen */
+    flex-direction: column;
+    width: 200px;
+    background: rgba(0,0,0,0.9);
+    padding: 1rem;
+    border-radius: 0 0 .5rem .5rem;
+    z-index: 1000;
+  }
+
+  /* navbar slides in when active */
+  .navbar.show {
+    right: 0;
+    display: flex;
+  }
+
+  .navbar a {
+    color: #fff;
+    margin: 1rem 0;
+  }
+
+  /* center home section on phone */
+  .home {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .home-img img {
+    max-width: 200px;
+  }
+}
+
+/* ===== Small Phones ===== */
+@media (max-width: 480px) {
+  html { font-size: 50%; }
+  .home-content h1 { font-size: 2.4rem; }
+  .home-content p { font-size: 1.4rem; }
+}
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap; /* lets it stack on smaller screens */
+}
+
+.about-img img {
+  width: 280px;
+  border-radius: 10px;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-img img {
+    max-width: 200px;
+  }
+}
+
+
